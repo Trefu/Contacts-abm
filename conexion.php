@@ -1,0 +1,1 @@
+// mysql://ulu8wuprs9qfu5b3:pcIxJdDfGJydL5ltAQOg@bfwbd8ucvczsezulo4ip-mysql.services.clever-cloud.com:3306/bfwbd8ucvczsezulo4ip
