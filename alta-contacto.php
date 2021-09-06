@@ -1,139 +1,66 @@
-<div id="page-wrapper">
+<?php
+include('conexion.php');
+
+
+?>
+<div class="d-flex flex-column justify-content-center" style="min-height: 100vh;">
 
     <!-- Content -->
-    <section id="content">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
+    <section id="container-fluid ">
 
-                    <!-- Main Content -->
-                    <section>
-                        <header>
-                            <h2>One Column</h2>
-                            <h3>A generic one column layout</h3>
-                        </header>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam metus, congue
-                            vel suscipit ut, dignissim non risus. Vestibulum ante est, fringilla nec placerat
-                            eu, vestibulum vitae diam. Integer eget egestas eros. Duis enim erat, mollis quis
-                            lacinia eget, blandit nec ipsum. Donec vitae turpis ipsum. Aliquam mauris libero,
-                            sagittis in eleifend at, mattis imperdiet velit. Donec urna risus, rutrum molestie
-                            varius ac, lacinia sit amet augue. Nam ultrices elementum eros.
-                        </p>
-                        <p>
-                            Sed faucibus viverra ligula, non varius magna semper vitae. Donec eu justo ut ipsum
-                            hendrerit congue nec eu risus. Cum sociis natoque penatibus et magnis dis parturient
-                            montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            egestas tempus. Cras convallis odio sit amet risus convallis porttitor. Integer
-                            vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam
-                            justo imperdiet vel. Proin nec dictum mi. Duis commodo enim non tellus interdum
-                            elit. Suspendisse fermentum adipiscing nisi, a tempor libero malesuada at. Morbi
-                            lacinia dui adipiscing risus eleifend tincidunt. Proin eu mauris eu tellus eleifend
-                            hendrerit.
-                        </p>
-                        <p>
-                            Mauris sit amet tellus urna. In facilisis, tortor vitae ultricies egestas, odio
-                            mi rhoncus arcu, quis euismod felis felis et velit. Mauris varius consectetur erat
-                            egestas tempus. Cras convallis odio sit amet risus convallis porttitor. Integer
-                            vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam
-                            justo imperdiet vel. Proin nec dictum mi. Duis commodo enim non tellus interdum
-                            iaculis. Phasellus ultrices diam sit amet orci lacinia sed consequat dui auctor.
-                        </p>
-                        <p>
-                            Sed faucibus viverra ligula, non varius magna semper vitae. Donec eu justo ut ipsum
-                            hendrerit congue nec eu risus. Cum sociis natoque penatibus et magnis dis parturient
-                            montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            egestas tempus. Cras convallis odio sit amet risus convallis porttitor. Integer
-                            vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam
-                            justo imperdiet vel. Proin nec dictum mi. Duis commodo enim non tellus interdum
-                            elit. Suspendisse fermentum adipiscing nisi, a tempor libero malesuada at. Morbi
-                            lacinia dui adipiscing risus eleifend tincidunt. Proin eu mauris eu tellus eleifend
-                            hendrerit.
-                        </p>
-                        <p>
-                            Mauris sit amet tellus urna. In facilisis, tortor vitae ultricies egestas, odio
-                            mi rhoncus arcu, quis euismod felis felis et velit. Mauris varius consectetur erat
-                            egestas tempus. Cras convallis odio sit amet risus convallis porttitor. Integer
-                            vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam
-                            justo imperdiet vel. Proin nec dictum mi. Duis commodo enim non tellus interdum
-                            iaculis. Phasellus ultrices diam sit amet orci lacinia sed consequat dui auctor.
-                        </p>
-                    </section>
-
+        <form class="container ">
+            <div class="form-group row mb-4">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input required name="email" type="email" class="form-control" id="inputEmail" placeholder="Email">
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="form-group row mb-4">
+                <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+                <div class="col-sm-10">
+                    <input required name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre">
+                </div>
+            </div>
+            <div class="form-group row mb-4">
+                <label for="imagen-url" class="col-sm-2 col-form-label">imagen url avatar</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="imagen-url" placeholder="url de avatar">
+                </div>
+            </div>
 
-    <!-- Footer -->
-    <section id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-8 col-12-medium">
+            <fieldset class="form-group">
 
-                    <!-- Links -->
-                    <section>
-                        <h2>Links to Important Stuff</h2>
-                        <div>
-                            <div class="row">
-                                <div class="col-3 col-12-small">
-                                    <ul class="link-list last-child">
-                                        <li><a href="#">Neque amet dapibus</a></li>
-                                        <li><a href="#">Sed mattis quis rutrum</a></li>
-                                        <li><a href="#">Accumsan suspendisse</a></li>
-                                        <li><a href="#">Eu varius vitae magna</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-3 col-12-small">
-                                    <ul class="link-list last-child">
-                                        <li><a href="#">Neque amet dapibus</a></li>
-                                        <li><a href="#">Sed mattis quis rutrum</a></li>
-                                        <li><a href="#">Accumsan suspendisse</a></li>
-                                        <li><a href="#">Eu varius vitae magna</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-3 col-12-small">
-                                    <ul class="link-list last-child">
-                                        <li><a href="#">Neque amet dapibus</a></li>
-                                        <li><a href="#">Sed mattis quis rutrum</a></li>
-                                        <li><a href="#">Accumsan suspendisse</a></li>
-                                        <li><a href="#">Eu varius vitae magna</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-3 col-12-small">
-                                    <ul class="link-list last-child">
-                                        <li><a href="#">Neque amet dapibus</a></li>
-                                        <li><a href="#">Sed mattis quis rutrum</a></li>
-                                        <li><a href="#">Accumsan suspendisse</a></li>
-                                        <li><a href="#">Eu varius vitae magna</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                <div class="row mt-4">
+                    <legend class="col-form-label col-sm-2 pt-0">Genero</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino" checked>
+                            <label class="form-check-label" for="masculino">
+                                Masculino
+                            </label>
                         </div>
-                    </section>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="genero" id="femenino" value="femenino">
+                            <label class="form-check-label" for="femenino">
+                                Femenino
+                            </label>
+                        </div>
 
+
+                    </div>
                 </div>
-                <div class="col-4 col-12-medium imp-medium">
+            </fieldset>
 
-                    <!-- Blurb -->
-                    <section>
-                        <h2>An Informative Text Blurb</h2>
-                        <p>
-                            Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. Suspendisse eu
-                            varius nibh. Suspendisse vitae magna eget odio amet mollis. Duis neque nisi,
-                            dapibus sed mattis quis, sed rutrum accumsan sed. Suspendisse eu varius nibh
-                            lorem ipsum amet dolor sit amet lorem ipsum consequat gravida justo mollis.
-                        </p>
-                    </section>
-
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button name='enviar_btn' type="submit" class="btn btn-primary">Enviar</button>
                 </div>
             </div>
-        </div>
+        </form>
+
     </section>
 
     <!-- Copyright -->
-    <div id="copyright">
-        &copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
-    </div>
+
 
 </div>

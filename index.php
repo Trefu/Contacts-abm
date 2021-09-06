@@ -1,6 +1,6 @@
 <?php
 //error_reporting(0);
-//OP es la operación enviada a traves del url (una especie de controler?)
+//OP es la operación enviada a traves del url 
 $op = $_GET['op'];
 switch ($op) {
   case 'baja':
@@ -17,13 +17,13 @@ switch ($op) {
 
   case 'alta':
 
-    $contenido = 'baja-contacto.php';
+    $contenido = 'alta-contacto.php';
     $titulo = 'Agregar contacto';
     break;
 
-  case 'consultas':
+  case 'buscar':
 
-    $contenido = 'baja-contacto.php';
+    $contenido = 'buscar-contacto.php';
     $titulo = 'Ver contacto';
     break;
 
@@ -40,47 +40,37 @@ switch ($op) {
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title><?php $titulo ?></title>
 </head>
 
 <body>
-  <section id="header">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-
-          <!-- Logo -->
-          <h1><a href="index.html" id="logo"><?= $titulo ?></a></h1>
-
-          <!-- Nav -->
-          <nav id="nav">
-            <a href='?op=home'>Inicio</a>
-            <a href="?op=alta">Agregar contacto</a>
-            <a href="?op=baja">Eliminar contacto</a>
-            <a href="?op=modificacion">Editar contacto</a>
-            <a href="?op=consultas">Buscar contacto</a>
-          </nav>
-
-        </div>
-      </div>
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <a class="nav-item nav-link" href='?op=home'>Inicio</a>
+        <a class="nav-item nav-link" href="?op=alta">Agregar</a>
+        <a class="nav-item nav-link" href="?op=baja">Eliminar</a>
+        <a class="nav-item nav-link" href="?op=modificacion">Editar</a>
+        <a class="nav-item nav-link" href="?op=buscar">Buscar</a>
+      </ul>
     </div>
+  </nav>
 
-  </section>
+
+
+
 
   <?php include $contenido ?>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-
-
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 </body>
