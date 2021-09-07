@@ -2,7 +2,7 @@
 function connect()
 {
     include('config/config.php');
-    $conn = mysqli_connect($hostName, $userDb, $password, $dbName) or die('Error conectando al db');
+    $conn = new mysqli(HOST_NAME, USER_DATABASE, PASSWORD_DATABASE, DATABASE_NAME);
     if (!$conn) {
         echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
         echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
