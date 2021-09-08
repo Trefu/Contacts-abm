@@ -4,7 +4,7 @@
 ?>
 
 <!-- Content -->
-<section id="container-fluid ">
+<section id="container-fluid">
 
     <form method="POST" name="alta_contacto" action="agregar-contacto.php" class="container ">
         <div class="form-group row mb-4">

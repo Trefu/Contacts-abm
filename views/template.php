@@ -18,11 +18,11 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                <a class="nav-item nav-link" href='?op=home'>Inicio</a>
-                <a class="nav-item nav-link" href="?op=alta">Agregar</a>
-                <a class="nav-item nav-link" href="?op=baja">Eliminar</a>
-                <a class="nav-item nav-link" href="?op=modificacion">Editar</a>
-                <a class="nav-item nav-link" href="?op=buscar">Buscar</a>
+                <a class="nav-item nav-link" href='?controller=pages&action=home'>Inicio</a>
+                <a class="nav-item nav-link" href="?controller=contacts&action=alta">Agregar</a>
+                <a class="nav-item nav-link" href="?controller=contacts&action=baja">Eliminar</a>
+                <a class="nav-item nav-link" href="?controller=contacts&action=modificacion">Editar</a>
+                <a class="nav-item nav-link" href="?controller=contacts&action=buscar">Buscar</a>
             </ul>
         </div>
     </nav>

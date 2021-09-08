@@ -4,6 +4,6 @@
     <hr class="my-2">
     <p>More info</p>
     <p class="lead">
-        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+        <a class="btn btn-primary btn-lg" href="?controller=contacts&action=alta" role="button">Add new contact</a>
     </p>
 </div>
