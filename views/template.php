@@ -1,3 +1,4 @@
+<?php ?>
 <!doctype html>
 <html lang="en">
 
@@ -5,30 +6,34 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Title</title>
 </head>
 
 <body>
     <!-- Nav -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <a class="nav-item nav-link" href='?controller=pages&action=home'>Inicio</a>
-                <a class="nav-item nav-link" href="?controller=contacts&action=alta">Agregar</a>
-                <a class="nav-item nav-link" href="?controller=contacts&action=baja">Eliminar</a>
-                <a class="nav-item nav-link" href="?controller=contacts&action=modificacion">Editar</a>
-                <a class="nav-item nav-link" href="?controller=contacts&action=buscar">Buscar</a>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+                <ul class="navbar-nav">
+                    <a class="nav-item nav-link " href='?controller=pages&action=home'>Inicio</a>
+                    <a class="nav-item nav-link" href="?controller=contacts&action=alta">Agregar</a>
+                    <a class="nav-item nav-link" href="?controller=contacts&action=baja">Eliminar</a>
+                    <a class="nav-item nav-link" href="?controller=contacts&action=modificacion">Editar</a>
+                    <a class="nav-item nav-link" href="?controller=contacts&action=buscar">Buscar</a>
+                </ul>
+            </div>
+
         </div>
+
     </nav>
 
 
-    <div class="container">
+    <div class="container ">
         <div class="row">
             <div class="col-12">
                 <?php include_once('router.php'); ?>

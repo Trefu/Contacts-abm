@@ -2,10 +2,10 @@
 include('conexion.php');
 $queryPaises = "SELECT pais from pais ORDER by pais";
 
-$reqPaises = mysqli_query($conexion, $queryPaises);
+$reqPaises = mysqli_query($conn, $queryPaises);
 
 
-mysqli_close($conexion);
+mysqli_close($conn);
 ?>
 
 <div class="form-group">
