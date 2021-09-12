@@ -1,56 +1,9 @@
-<?php ?>
-<!doctype html>
-<html lang="en">
+<?php
 
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <title>Title</title>
-</head>
-
-<body>
-    <!-- Nav -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
-                <ul class="navbar-nav">
-                    <a class="nav-item nav-link " href='?controller=pages&action=home'>Inicio</a>
-                    <a class="nav-item nav-link" href="?controller=contacts&action=alta">Agregar</a>
-                    <a class="nav-item nav-link" href="?controller=contacts&action=baja">Eliminar</a>
-                    <a class="nav-item nav-link" href="?controller=contacts&action=modificacion">Editar</a>
-                    <a class="nav-item nav-link" href="?controller=contacts&action=buscar">Buscar</a>
-                </ul>
-            </div>
-
-        </div>
-
-    </nav>
+include_once 'header.php';
 
 
-    <div class="container ">
-        <div class="row">
-            <div class="col-12">
-                <?php include_once('router.php'); ?>
+//vista dinamica
+include_once 'router.php';
 
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
-</body>
-
-</html>
+include_once 'footer.php';

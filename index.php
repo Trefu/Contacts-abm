@@ -1,8 +1,10 @@
 <?php
 
-
+include_once 'init.php';
 $controller = "pages";
 $action = "home";
+$template = new Template('views/template.php');
+
 /**
  * si los controladores contienen pedido y un requisito valido, ejecuta el get, de caso contrario envia al home
  */

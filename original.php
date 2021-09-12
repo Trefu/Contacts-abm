@@ -3,7 +3,7 @@
     <div class="container">
         <div class="text-center my-5">
             <h1 class="fw-bolder">Job lister</h1>
-            <p class="lead mb-0">Crud made with php and mysql</p>
+            <p class="lead mb-0">Crud made by php and mysql</p>
         </div>
     </div>
 </header>
