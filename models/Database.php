@@ -16,7 +16,6 @@ class Database
     public  function __construct()
     {
         $dsn = "mysql:host=$this->servername;dbname=$this->dbname;charset=$this->charset";
-
         $options = array(
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
@@ -35,7 +34,27 @@ class Database
 
     public function bind($param, $value, $type = null)
     {
-        $this->stmt->bindValue($param, $value, $type);
+
+        if (is_null($type)) {
+
+            switch (true) {
+
+                case is_int($value):
+                    $type = PDO::PARAM_INT;
+                    break;
+                case is_bool($value):
+                    $type = PDO::PARAM_BOOL;
+                    break;
+                case is_null($value):
+                    $type = PDO::PARAM_NULL;
+                    break;
+
+                default:
+                    $type = PDO::PARAM_STR;
+                    break;
+            }
+            $this->stmt->bindValue($param, $value, $type);
+        }
     }
 
     public function execute()

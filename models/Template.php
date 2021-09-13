@@ -10,10 +10,12 @@ class Template
     {
         $this->template = $template;
     }
+
     public function __get($key)
     {
         return $this->vars[$key];
     }
+
     public function __set($key, $value)
     {
         $this->vars[$key] = $value;
@@ -24,7 +26,6 @@ class Template
         extract($this->vars);
         chdir(dirname($this->template));
         ob_start();
-
         include basename($this->template);
 
         return ob_get_clean();
