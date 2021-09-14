@@ -14,26 +14,28 @@
 <div class="container">
     <div class="row">
         <!-- Blog entries-->
-        <div class="col-lg-6">
+        <div class="col-lg-8">
             <!-- Featured blog post-->
 
             <?php foreach ($jobs as $job) : ?>
 
-
                 <div class="card mb-4">
                     <div class="card-body">
-                        <div class="small text-muted"> <?= $job->post_date ?></div>
+                        <div class="small text-muted"> <?php
+                                                        $job->post_date = new DateTime($job->post_date);
+                                                        echo $job->post_date->format("d-m-Y") ?>
+                        </div>
                         <h2 class="card-title"> <?= $job->title; ?></h2>
                         <p class="card-text"> <?= $job->description ?></p>
-                        <span class="text-muted"><?php echo "Lugar: " . ucfirst($job->location) ?></span>
-                        <p class='font-weight-light text-muted mb-0 '> <?= "Empresa: $job->company" ?> </p>
+                        <span class="font-italic"><?php echo "Lugar: " . ucfirst($job->location) ?></span>
+                        <p class='font-weight-light font-italic mb-0 '> <?= "Empresa: $job->company" ?> </p>
                         <p> <?= "Salario: $$job->salary" ?></p>
                         <a class="btn btn-primary" href="#!">Read more →</a>
                     </div>
                 </div>
             <?php endforeach; ?>
 
-            <nav aria-label="Pagination">
+            <!--    <nav aria-label="Pagination">
                 <hr class="my-0" />
                 <ul class="pagination justify-content-center my-4">
                     <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
@@ -44,7 +46,7 @@
                     <li class="page-item"><a class="page-link" href="#!">15</a></li>
                     <li class="page-item"><a class="page-link" href="#!">Older</a></li>
                 </ul>
-            </nav>
+            </nav> -->
         </div>
         <!-- Side widgets-->
         <div class="col-lg-4">
