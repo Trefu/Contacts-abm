@@ -42,14 +42,12 @@ class PagesController
         }
         echo $postJobPage;
     }
-    public function jobByCategory()
+    public function individualJobPage()
     {
-        $homePage = new Template('../views/pages/home.php');
+        $individualJobPage = new Template('../views/pages/individualjobpage.php');
         $job = new Job();
-        $homePage->categories = $job->getCategories();
-        if (isset($_GET['search'])) {
-            $homePage->jobs = $job->getSearchedJobs($_GET['search']);
-        };
-        echo $homePage;
+        $id = $_GET['jobid'];
+        $individualJobPage->jobSelected = $job->getOneJob($id);
+        echo $individualJobPage;
     }
 };

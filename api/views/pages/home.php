@@ -31,7 +31,7 @@
                         <span class="font-italic"><?php echo "Lugar: " . ucfirst($job->location) ?></span>
                         <p class='font-weight-light font-italic mb-0 '> <?= "Empresa: $job->company" ?> </p>
                         <p> <?= "Salario: $$job->salary" ?></p>
-                        <a class="btn btn-primary" href="#!">Read more →</a>
+                        <a class="btn btn-primary" href="?controller=pages&action=individualjobpage&jobid=<?= $job->id ?>">Read more →</a>
                     </div>
                 </div>
             <?php endforeach; ?>

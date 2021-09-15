@@ -1,5 +1,5 @@
 <div class='full-screen d-flex justify-content-center align-center flex-column'>
-    <div class="container ">
+    <div class="container py-5">
         <form id="newjobform" method="POST">
             <div class="form-floating mb-3">
                 <input name="job_title" class="form-control" id="job_title" type="text" placeholder="Ex: Manager, Developer..." required />

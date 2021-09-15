@@ -1,5 +1,5 @@
 <?php
-include_once('../config/config.php');
+include_once('../../config/config.php');
 
 class Database
 {
@@ -70,6 +70,7 @@ class Database
 
     public function single()
     {
+        $this->execute();
         return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
 }
