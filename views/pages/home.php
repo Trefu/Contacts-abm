@@ -26,6 +26,7 @@
                                                         echo $job->post_date->format("d-m-Y") ?>
                         </div>
                         <h2 class="card-title"> <?= $job->title; ?></h2>
+                        <span class='text-muted pb-2'><?= $job->cname ?></span>
                         <p class="card-text"> <?= $job->description ?></p>
                         <span class="font-italic"><?php echo "Lugar: " . ucfirst($job->location) ?></span>
                         <p class='font-weight-light font-italic mb-0 '> <?= "Empresa: $job->company" ?> </p>
@@ -54,10 +55,10 @@
             <div class="card mb-4">
                 <div class="card-header">Search</div>
                 <div class="card-body">
-                    <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
-                        <button class="btn btn-primary" id="button-search" type="button">Go!</button>
-                    </div>
+                    <form class="input-group" method="GET">
+                        <input name="search" class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                        <button class="btn btn-primary" id="button-search" type="submit">Go!</button>
+                    </form>
                 </div>
             </div>
             <!-- Categories widget-->
@@ -68,7 +69,7 @@
                         <div class="col-sm-12 text-center">
                             <?php foreach ($categories as $category) : ?>
                                 <ul class="list-unstyled mb-0">
-                                    <li><a href="#!"><?= $category->name ?></a></li>
+                                    <li><a href="?search=<?php echo $category->id ?>"><?= $category->name ?></a></li>
 
                                 </ul>
                             <?php endforeach ?>
