@@ -8,13 +8,18 @@ class PagesController
     public function home()
     {
 
-        $homePage = new Template('../views/pages/home.php');
+        $homePage = new Template('../views/pages/home/home.php');
         $job = new Job();
         $homePage->jobs = $job->getAllJobs();
         $homePage->categories = $job->getCategories();
-        if (isset($_GET['search'])) {
-            $param = $_GET['search'];
-            $homePage->jobs = $job->getSearchedJobs($param);
+        if (isset($_GET['searchByCategory'])) {
+            print_r($_GET);
+            $param = $_GET['searchByCategory'];
+            $homePage->jobs = $job->getJobByCategory($param);
+        };
+        if (isset($_GET['searchByQuery'])) {
+            $queryParam = $_GET['searchByQuery'];
+            $homePage->jobs = $job->getJobByQuery($queryParam);
         };
 
         echo $homePage;

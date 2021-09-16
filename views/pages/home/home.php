@@ -1,7 +1,6 @@
 <?php
 ?>
 
-<!-- Page header with logo and tagline-->
 <header class="py-5 bg-light border-bottom mb-4">
     <div class="container">
         <div class="text-center my-5">
@@ -10,32 +9,18 @@
         </div>
     </div>
 </header>
-<!-- Page content-->
+
 <div class="container">
     <div class="row">
-        <!-- Blog entries-->
+
         <div class="col-lg-8">
-            <!-- Featured blog post-->
 
-            <?php foreach ($jobs as $job) : ?>
-
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="small text-muted"> <?php
-                                                        $job->post_date = new DateTime($job->post_date);
-                                                        echo $job->post_date->format("d-m-Y") ?>
-                        </div>
-                        <h2 class="card-title"> <?= $job->title; ?></h2>
-                        <span class='text-muted pb-2'><?= $job->cname ?></span>
-                        <p class="card-text"> <?= $job->description ?></p>
-                        <span class="font-italic"><?php echo "Lugar: " . ucfirst($job->location) ?></span>
-                        <p class='font-weight-light font-italic mb-0 '> <?= "Empresa: $job->company" ?> </p>
-                        <p> <?= "Salario: $$job->salary" ?></p>
-                        <a class="btn btn-primary" href="?controller=pages&action=individualjobpage&jobid=<?= $job->id ?>">Read more →</a>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-
+            <?php if (!empty($jobs)) {
+                include_once "jobsCards.php";
+            } else {
+                echo "<h1>No jobs found! </h1>";
+            };
+            ?>
             <!--    <nav aria-label="Pagination">
                 <hr class="my-0" />
                 <ul class="pagination justify-content-center my-4">
@@ -49,19 +34,16 @@
                 </ul>
             </nav> -->
         </div>
-        <!-- Side widgets-->
         <div class="col-lg-4">
-            <!-- Search widget-->
             <div class="card mb-4">
                 <div class="card-header">Search</div>
                 <div class="card-body">
                     <form class="input-group" method="GET">
-                        <input name="search" class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                        <input name="searchByQuery" class="form-control" type="text" placeholder="Search by job name, company..." aria-label="Search by job name, company..." aria-describedby="button-search" />
                         <button class="btn btn-primary" id="button-search" type="submit">Go!</button>
                     </form>
                 </div>
             </div>
-            <!-- Categories widget-->
             <div class="card mb-4">
                 <div class="card-header">Categories</div>
                 <div class="card-body">
@@ -69,7 +51,7 @@
                         <div class="col-sm-12 text-center">
                             <?php foreach ($categories as $category) : ?>
                                 <ul class="list-unstyled mb-0">
-                                    <li><a href="?search=<?php echo $category->id ?>"><?= $category->name ?></a></li>
+                                    <li><a href="?searchByCategory=<?php echo $category->id ?>"><?= $category->name ?></a></li>
 
                                 </ul>
                             <?php endforeach ?>
@@ -78,7 +60,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Side widget-->
 
         </div>
     </div>

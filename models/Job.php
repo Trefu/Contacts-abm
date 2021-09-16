@@ -34,12 +34,13 @@ class job
         $results = $this->db->resultSet();
         return $results;
     }
-    public function getSearchedJobs($searchParam)
+    public function getJobByCategory($searchParam)
     {
         $this->db->query("SELECT jobs.*, categories.name as cname FROM jobs
         INNER JOIN categories on jobs.category_id = categories.id
         WHERE category_id = $searchParam
         ORDER BY post_date DESC");
+
         $results = $this->db->resultSet();
         return $results;
     }
@@ -53,7 +54,7 @@ class job
         $this->db->bind(':title', $data['job_title']);
         $this->db->bind(':description', $data['job_description']);
         $this->db->bind(':salary', $data['job_salary']);
-        $this->db->bind(':location', $data['job_location']);
+        $this->db->bind(':location', ucfirst($data['job_location']));
         $this->db->bind(':contact_user', $data['job_user_email']);
         $this->db->bind(':contact_email', $data['job_company_email']);
         if ($this->db->execute()) {
@@ -61,5 +62,13 @@ class job
         } else {
             return false;
         };
+    }
+    public function getJobByQuery($queryParam)
+    {
+
+        $this->db->query("SELECT * FROM jobs
+                WHERE MATCH(title,company,location) AGAINST ('$queryParam' IN BOOLEAN MODE)");
+        $results = $this->db->resultSet();
+        return $results;
     }
 }
