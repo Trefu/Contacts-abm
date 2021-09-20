@@ -1,4 +1,5 @@
 <div class='full-screen d-flex justify-content-center align-center flex-column'>
+
     <div class="container py-5">
         <form id="newjobform" method="POST">
             <div class="form-floating mb-3">

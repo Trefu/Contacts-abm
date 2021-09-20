@@ -1,6 +1,3 @@
-<?php
-?>
-
 <header class="py-5 bg-light border-bottom mb-4">
     <div class="container">
         <div class="text-center my-5">
@@ -16,7 +13,7 @@
         <div class="col-lg-8">
 
             <?php if (!empty($jobs)) {
-                include_once "jobsCards.php";
+                include_once "../jobs/jobsCards.php";
             } else {
                 echo "<h1>No jobs found! </h1>";
             };
@@ -39,7 +36,7 @@
                 <div class="card-header">Search</div>
                 <div class="card-body">
                     <form class="input-group" method="GET">
-                        <input name="searchByQuery" class="form-control" type="text" placeholder="Search by job name, company..." aria-label="Search by job name, company..." aria-describedby="button-search" />
+                        <input required min="3" name="searchByQuery" class="form-control" type="text" placeholder="Search by job name, company..." aria-label="Search by job name, company..." aria-describedby="button-search" />
                         <button class="btn btn-primary" id="button-search" type="submit">Go!</button>
                     </form>
                 </div>
@@ -48,12 +45,9 @@
                 <div class="card-header">Categories</div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-sm-12 text-center">
+                        <div class=" text-center">
                             <?php foreach ($categories as $category) : ?>
-                                <ul class="list-unstyled mb-0">
-                                    <li><a href="?searchByCategory=<?php echo $category->id ?>"><?= $category->name ?></a></li>
-
-                                </ul>
+                                <a class="p-2" href="?searchByCategory=<?php echo $category->id ?>"><?= $category->name ?></a>
                             <?php endforeach ?>
                         </div>
 

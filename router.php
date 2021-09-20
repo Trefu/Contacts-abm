@@ -1,4 +1,5 @@
 <?php
+
 include_once 'init.php';
 $controller = "pages";
 $action = "home";
@@ -9,6 +10,7 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
         $action = $_GET['action'];
     };
 };
+
 /**
  * @$controller parametro recibido por GET a travez del index.php
  */
