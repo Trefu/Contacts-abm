@@ -48,6 +48,8 @@ class PagesController
     }
     public function individualJobPage()
     {
+        if (!isset($_GET['jobid'])) redirect('index.php', "Something went wrong", 'error');
+
         if (isset($_POST["del_id"])) {
             $job = new Job();
             $del_id = $_POST["del_id"];
@@ -65,6 +67,7 @@ class PagesController
     }
     public function editJob()
     {
+        if (!isset($_GET['jobid'])) redirect('index.php', "Something went wrong", 'error');
         $editJobPage = new Template('../views/pages/jobs/editjob.php');
         $job = new Job();
         $id = $_GET['jobid'];
